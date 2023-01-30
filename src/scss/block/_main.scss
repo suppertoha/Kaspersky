@@ -1,0 +1,10 @@
+//! main
+/* main */
+.main {
+  position: relative;
+  z-index: 5;
+
+  @include _768 {
+    background: #ffffff;
+  }
+}
