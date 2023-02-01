@@ -184,14 +184,6 @@
   }
 }
 
-.swiper-slide {
-}
-
-.regions {
-
-		&__swiper-slide {
-		}
-}
 
 .slide-regions {
   position: relative;
@@ -204,10 +196,12 @@
     }
   }
 
-  &__inner {
-  }
-
   &__title {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: 0.8s;
+
     font-weight: 400;
     font-size: 25px;
     line-height: 23px;
@@ -215,16 +209,18 @@
   }
 
   &__percentage {
+    position: absolute;
+    top: 315px;
+    left: -100%;
+    opacity: 0;
+    transition: 0.8s;
+
     max-width: 260px;
     font-weight: 400;
     font-size: 18.7026px;
     line-height: 21px;
     color: #444444;
-    text-align: center;
-
-    position: absolute;
-    left: 145px;
-    top: 315px;
+    text-align: center;    
 
     strong{
       display: flex;
@@ -242,9 +238,6 @@
     }
   }
 
-  &__statistic {
-  }
-
   &__respondents {
     max-width: 525px;
     display: flex;
@@ -254,7 +247,9 @@
     color: #444444;
 
     position: absolute;
-    top: 110px;
+    opacity: 0;
+    transition: 0.8s;
+    top: -100%;
     left: 50%;
     transform: translate(-50%, 0%);
 
@@ -289,13 +284,13 @@
       }
     }
   }
-
-  &__person {
-  }
 }
+
 .statistic {
   position: absolute;
-  right: 0;
+  transition: 0.8s;
+  opacity: 0;
+  right: -100%;
   top: 290px;
   max-width: 400px;
 
@@ -307,9 +302,10 @@
 		}
 
 		&__list {
+      max-width: 405px;
+      padding-right: 10px;
 
 			&_four {
-        max-width: 405px;
 			}
 		}
 
@@ -365,9 +361,12 @@
 			}
 		}
 }
+
 .person {
   position: absolute;
-  bottom: 0;
+  opacity: 0;
+  transition: 0.8s;
+  bottom: -100%;
   left: 145px;
 
 		&__inner {
@@ -423,6 +422,7 @@
       }
 		}
 }
+
 .btn-green {
   color: #53CD9F;
   font-size: 18px;
@@ -440,6 +440,8 @@
 // animation
 
 .slide-regions_first{
+  
+
   .slide-regions__title{
     padding-left: 145px;
   }
@@ -458,15 +460,294 @@
     background-image: url(../images/regions-bg-global.svg);
     background-repeat: no-repeat;
     transition: 0.8s;
+  }
+}
+
+
+.slide-regions_second{
+  .slide-regions__title{
+    padding-left: 135px;
+    max-width: 942px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  position: relative;
+    &:before{
+    content: '' ; 
+    display: inline-block;
+    width: 341px;
+    height: 290px;
+    transform: scale(0.2);
+    position: absolute;
+    z-index: -1;
+    top: 192px;
+    left: 125px;
+    background-image: url(../images/north-America-fon.svg);
+    background-repeat: no-repeat;
+    transition: 0.8s;
 
   }
 }
 
 .swiper-slide-active{
-  &.slide-regions_first{
+  &.slide-regions_first, &.slide-regions_second{
     &:before{
       transform: scale(1);
     }
   }
+
+  &.slide-regions_first{
+    .slide-regions__percentage {
+      left: 145px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+
+  &.slide-regions_second{
+    .slide-regions__percentage {
+      left: 135px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+
+  .slide-regions__title{
+    top: 0px;
+  }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-offers{
+  float: left;
+  width: 100%;
+}
+
+
+
+
+
+
+/* header */
+@media (max-width: 360px){
+  body #header .middle-h-row td.logo_wrapp {
+      display: block;
+      width: 100%;
+  }
+}
+
+@media (max-width: 360px){
+  #header .middle-h-row .logo_wrapp .logo {
+      max-width: 220px;
+      margin: 0 auto;
+      padding-right: 0;
+  }
+}
+
+@media (max-width: 360px){
+  body #header .middle-h-row .basket_wrapp {
+      width: 100%;
+      display: block;
+  }
+}
+
+@media (max-width: 360px){
+  .wrapper.basket_normal.head_type_2 #header .middle-h-row .basket_wrapp .header-cart-block {
+      margin: -20px auto 0;
+      width: 100%;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+front_slider_wrapp .image
+
+/* 31. 01. 2023 */
+.specials_slider_wrapp {
+  margin-top: 30px;
+}
+
+.wrapper-home-page .front_slider_wrapp .flex-viewport{
+    width: 100%;
+    margin-bottom: -70px;
+    margin-top: 20px;
+}
+
+.wrapper-home-page .front_slider .image-home img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.wrapper-home-page .front_slider .image-home {
+  vertical-align: baseline;
+  width: 26%;
+  padding-left: 30px;
+}
+
+.wrapper-home-page .front_slider_wrapp .extended_pagination {
+      margin-bottom: 25px;
+    margin-top: 15px;
+    width: auto;
+max-width: 300px;
+}
+
+.wrapper-home-page .front_slider_wrapp .extended_pagination > li.active i {
+
+    border-bottom-width: 46px !important;
+  border-top-width: 46px !important;
+}
+
+
+
+
+.wrapper-home-page .front_slider .info img {
+  margin-right: 10px;
+}
+
+.wrapper-home-page .front_slider .price {
+  font-size: 32px;
+  line-height: 34px;
+
+}
+
+.wrapper-home-page .index_bottom .info_column .about_column, .index_bottom .info_column .news_column {
+  width: 100%;
+}
+
+.wrapper-home-page .b24-form-padding-side {
+  padding: 14px 0px;
+}
+
+.wrapper-home-page .b24-form-border-bottom {
+  margin-left: 0px;
+}
+
+.wrapper-home-page .b24-form-wrapper {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .wrapper-home-page .image-home{
+     min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+	.wrapper-home-page .image-home, .wrapper-home-page .info{
+   display: block;
+    text-align: center;
+    width: auto;
+	}
+}
+
+@media (max-width: 768px) {
+.wrapper-home-page .info{
+   margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper-home-page .front_slider .image-home {
+	 margin: 0 auto;
+  padding-left: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper-home-page .front_slider_wrapp .flex-viewport {
+	  margin-bottom: 0px;
+	}
+}
+
+@media (max-width: 600px){
+	.wrapper.basket_normal.head_type_2 #header .middle-h-row .basket_wrapp .header-cart-block {
+	  min-width: 96px;
+	}
+}
+
+@media (max-width: 600px){
+	#header .middle-h-row .logo_wrapp .logo {
+	  min-width: 140px;
+	}
+}
+
+
+/* header */
