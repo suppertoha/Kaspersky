@@ -228,13 +228,21 @@
       font-size: 175px;
       color: #000000;
       line-height: 1;
+
+      span{
+        font-size: 75px;
+        line-height: 1;
+        font-weight: 300;
+        align-self: flex-end;
+      }
     }
 
-    span{
-      font-size: 75px;
-      line-height: 1;
-      font-weight: 300;
-      align-self: flex-end;
+    >span{
+      font-weight: 400;
+      font-size: 42px;
+      line-height: 37px;
+      color: #000000;
+      display: block;
     }
   }
 
@@ -354,6 +362,12 @@
         }
 			}
 
+      &_70 {
+        &:before{
+          width: 154px;
+        }
+			}
+
 			&_60 {
         &:before{
           width: 122px;
@@ -420,6 +434,27 @@
         bottom: 200px;
         background: #000000;
       }
+
+      &_first{
+        position: absolute;
+        left:0;
+        top:0;
+        width: 405px;
+        height: 482px;
+      }
+
+      
+      &_second{
+        position: absolute;
+        right:0;
+        top:0;
+        width: 466px;
+        height: 488px;
+      }
+
+
+
+
 		}
 }
 
@@ -428,6 +463,7 @@
   font-size: 18px;
   display: flex;
   align-items: center;
+  text-align: left;
   width: auto;
 
   img{
@@ -463,11 +499,11 @@
   }
 }
 
-
 .slide-regions_second{
   .slide-regions__title{
-    padding-left: 135px;
-    max-width: 942px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 895px;
     letter-spacing: 1px;
     text-align: center;
   }
@@ -486,7 +522,63 @@
     background-image: url(../images/north-America-fon.svg);
     background-repeat: no-repeat;
     transition: 0.8s;
+  }
 
+  .person__images:before {
+    left: -20px;
+  }
+
+  .slide-regions__percentage{
+    text-align: left;
+    top: 115px;
+  }
+
+  .statistic{
+    top: 150px;
+  }
+}
+
+.slide-regions_third{
+  .slide-regions__title{
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 895px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  position: relative;
+    &:before{
+    content: '' ; 
+    display: inline-block;
+    width: 341px;
+    height: 290px;
+    transform: scale(0.2);
+    position: absolute;
+    z-index: -1;
+    top: 192px;
+    left: 125px;
+    background-image: url(../images/north-America-fon.svg);
+    background-repeat: no-repeat;
+    transition: 0.8s;
+  }
+
+  .person__images{
+    width: 660px;
+    height: 482px;
+    &:before {
+      left: -20px;
+    }
+  }
+
+
+  .slide-regions__percentage{
+    text-align: left;
+    top: 115px;
+  }
+
+  .statistic{
+    top: 150px;
   }
 }
 
@@ -539,6 +631,38 @@
       bottom: 0px;
       opacity: 1;
     }
+
+    .slide-regions__respondents {
+      top: 415px;
+      left: 57%;
+    }
+  }
+
+  &.slide-regions_third{
+    .slide-regions__percentage {
+      left: 135px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents {
+      top: 415px;
+      left: 57%;
+    }
   }
 
   .slide-regions__title{
@@ -579,11 +703,7 @@
 
 
 
-.main-offers{
-  float: left;
-  width: 100%;
-}
-
+ 
 
 
 
@@ -594,6 +714,7 @@
   body #header .middle-h-row td.logo_wrapp {
       display: block;
       width: 100%;
+      left: calc(50% - 120px);
   }
 }
 
@@ -602,6 +723,7 @@
       max-width: 220px;
       margin: 0 auto;
       padding-right: 0;
+      
   }
 }
 
@@ -616,8 +738,36 @@
   .wrapper.basket_normal.head_type_2 #header .middle-h-row .basket_wrapp .header-cart-block {
       margin: -20px auto 0;
       width: 100%;
+      right: 50%;
+    transform: translate(-50%, 0%);
     
+  position: relative;
+  &:before{
+  content: '' ; 
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   }
+  }
+}
+
+.catalog-detail__bottom-info li:before, .catalog-detail__previewtext li:before {
+  content: '' ; 
+  display: inline-block;
+position: absolute;
+left: 0px;
+top: 0px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: #365EDC !important;
+
+  transform: translate(50%, 50%);
+  
 }
 
 
@@ -636,8 +786,6 @@
 
 
 
-
-front_slider_wrapp .image
 
 /* 31. 01. 2023 */
 .specials_slider_wrapp {
@@ -751,3 +899,4 @@ max-width: 300px;
 
 
 /* header */
+
