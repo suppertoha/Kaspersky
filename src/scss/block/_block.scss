@@ -35,6 +35,13 @@
   line-height: 93px;
   color: #C2D6D6;
   transform: rotate(-90deg);
+
+  @include _768 {
+    font-size: 33px;
+    line-height: 93px;
+    left: -20px;
+    top: 0;
+  }
 }
 
 
