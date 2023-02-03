@@ -1,0 +1,57 @@
+.slide-regions_first{
+  
+
+  .slide-regions__title{
+    padding-left: 145px;
+  }
+
+  position: relative;
+    &:before{
+    content: '' ; 
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.2);
+    position: absolute;
+    z-index: -1;
+    top: 162px;
+    left: 125px;
+    background-image: url(../images/regions-bg-global.svg);
+    background-repeat: no-repeat;
+    transition: 0.8s;
+  }
+}
+
+.swiper-slide-active{
+  &.slide-regions_first{
+    &:before{
+      transform: scale(1);
+    }
+  }
+
+  &.slide-regions_first{
+    .slide-regions__percentage {
+      left: 116px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+
+  .slide-regions__title{
+    top: 0px;
+  }
+}

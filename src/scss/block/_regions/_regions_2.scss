@@ -1,0 +1,77 @@
+.slide-regions_second{
+  .slide-regions__title{
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 895px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  position: relative;
+    &:before{
+    content: '' ; 
+    display: inline-block;
+    width: 341px;
+    height: 290px;
+    transform: scale(0.2);
+    position: absolute;
+    z-index: -1;
+    top: 192px;
+    left: 125px;
+    background-image: url(../images/north-America-fon.svg);
+    background-repeat: no-repeat;
+    transition: 0.8s;
+  }
+
+  .person__images:before {
+    left: -20px;
+  }
+
+  .slide-regions__percentage{
+    text-align: left;
+    top: 115px;
+  }
+
+  .statistic{
+    top: 150px;
+  }
+}
+
+.swiper-slide-active{
+  &.slide-regions_second{
+    &:before{
+      transform: scale(1);
+    }
+  }
+
+  &.slide-regions_second{
+    .slide-regions__percentage {
+      left: 135px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents {
+      top: 460px;
+      left: 57%;
+    }
+  }
+
+  .slide-regions__title{
+    top: 0px;
+  }
+}

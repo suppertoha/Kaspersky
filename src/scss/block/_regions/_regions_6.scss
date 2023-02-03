@@ -1,0 +1,179 @@
+.slide-regions_sixth{
+  .slide-regions__title{
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 877px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  position: relative;
+    &:before{
+    content: '' ; 
+    display: inline-block;
+    width: 381.84px;
+    height: 314.02px;
+    transform: scale(0.2);
+    position: absolute;
+    z-index: -1;
+    top: 215px;
+    right: 143px;
+    background-image: url(../images/Russia-fon.svg);
+    background-repeat: no-repeat;
+    transition: 0.8s;
+  }
+
+  .person__images:before {
+    left: -20px;
+  }
+
+  .slide-regions__percentage{
+    text-align: left;
+    top: 115px;
+  }
+
+  .statistic{
+    top: 150px;
+  }
+
+  .person{
+    &__description{
+      max-width: 390px;
+    }
+
+    &__motto{
+      max-width: 350px;
+    }
+
+    &__text{
+      max-width: 351px;
+    }
+  }
+
+  .statistic{
+    width: 600px;
+    max-width: 100%;
+
+    &__list{
+      margin-left: auto;
+    }
+
+    &__title{
+      max-width: 475px;
+    }
+
+    &__item {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #444444;
+      position: relative;
+      padding-left: 14px;
+
+      &:not(:first-child){
+        margin-TOP: 15px;
+      }
+
+      span{
+        color:#000000;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 101%;
+        letter-spacing: -0.02em;
+        margin-right: 10px;
+      }
+
+      &:before{
+        content: '' ; 
+        display: inline-block;
+        width: 100%;
+        max-width: 158px;
+        height: 20px;
+        position: absolute;
+        right: 390px;
+        top: 0px;
+        background: linear-gradient(90deg, #FF1CF6 0%, #FFC9B4 100%);
+      }
+
+			&_100 {
+        &:before{
+          width: 100%;
+        }
+			}
+
+			&_80 {
+        &:before{
+          width: 122px;
+        }
+			}
+
+      &_70 {
+        &:before{
+          width: 112px;
+        }
+			}
+
+			&_60 {
+        &:before{
+          width: 89px;
+        }
+			}
+
+      &_50 {
+        &:before{
+          width: 35px;
+        }
+			}
+		}
+  }
+}
+
+.swiper-slide-active{
+  &.slide-regions_sixth{
+    &:before{
+      transform: scale(1);
+    }
+  }
+
+  &.slide-regions_sixth{
+    .slide-regions__percentage {
+      left: 110px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      opacity: 1;
+      left: 110px;
+
+      &__description{
+        max-width: 100%;
+        width: 429px;
+      }
+    }
+
+    .slide-regions__respondents {
+      top: 460px;
+      left: 57%;
+    }
+
+    .slide-regions__percentage-bottom{
+      left: 372px;
+      top: 320px;
+    }
+  }
+
+  .slide-regions__title{
+    top: 0px;
+  }
+}

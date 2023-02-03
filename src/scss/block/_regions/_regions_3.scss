@@ -1,0 +1,153 @@
+.slide-regions_third {
+  .slide-regions__title {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 895px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  position: relative;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 237.98px;
+    height: 300.01px;
+    transform: scale(0.2);
+    position: absolute;
+    z-index: -1;
+    top: 455px;
+    left: 195px;
+    background-image: url(../images/Latin-America-fon-map.svg);
+    background-repeat: no-repeat;
+    transition: 0.8s;
+  }
+
+  .percent-wrap {
+    color: #000000;
+    min-width: 521px;
+    &__container {
+      display: flex;
+    }
+
+    &__num {
+      font-weight: 400;
+      font-size: 175px;
+      line-height: 135px;
+    }
+
+    &__description {
+      max-width: 360px;
+      span {
+        display: block;
+        &:first-child {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 33px;
+          line-height: 30px;
+        }
+
+        &:last-child {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 73px;
+          line-height: 80px;
+        }
+      }
+    }
+
+    &__text {
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      width: 270px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18.7026px;
+      line-height: 21px;
+      color: #444444;
+    }
+  }
+
+  
+  .person{
+    &__images{
+      width: 640px;
+      height: 482px;
+      right: -40px;
+      &:before {
+        left: -20px;
+      }
+    }
+
+    &__text{
+      max-width: 160px;
+    }
+
+    &__description {
+      position: relative;
+      max-width: 285px;
+      align-self: flex-end;
+      padding-bottom: 50px;
+
+      &_first{
+        position: absolute;
+        left: 180px;
+        bottom: -45px;
+      }
+
+      &_second{
+        
+      }
+    }
+  } 
+
+  .slide-regions__percentage {
+    text-align: left;
+    top: 115px;
+  }
+
+  .statistic {
+    top: 150px;
+  }
+}
+
+.swiper-slide-active{
+  &.slide-regions_third{
+    &:before{
+      transform: scale(1);
+    }
+  }
+
+  &.slide-regions_third{
+    .slide-regions__percentage {
+      left: 116px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      left: 116px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents {
+      top: 460px;
+      left: 57%;
+    }
+  }
+
+  .slide-regions__title{
+    top: 0px;
+  }
+}

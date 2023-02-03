@@ -1,0 +1,168 @@
+.percentage-block {
+  position: absolute;
+  transition: 0.8s;
+  opacity: 0;
+  left: -100%;
+  top: 225px;
+  &__item {
+    display: flex;
+    img{
+      margin-right: 24px;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    max-width: 175px;
+    font-size: 15px;
+    line-height: 14px;
+    strong{
+      display: block;
+      font-weight: 400;
+      font-size: 86px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+
+      span{
+        font-size: 40px;
+        margin-left: -10px;
+      }
+    }
+  }
+}
+
+.percent-wrap {
+  position: absolute;
+  transition: 0.8s;
+  opacity: 0;
+  bottom: -100%;
+  right: 0;
+  width: 425px;
+
+  &__name {
+    font-weight: 400;
+    font-size: 33.2582px;
+    line-height: 30px;
+    color: #000000;
+    max-width: 244px;
+    text-align: center;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__num {
+    display: flex;
+    font-weight: 400;
+    font-size: 175px;
+    line-height: 0.7;
+
+    span{
+      font-size: 75px;
+      line-height: 1;
+      align-self: flex-end;
+    }
+  }
+
+  &__text {
+    max-width: 245px;
+    margin-left: auto;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: -45px;
+  }
+}
+
+
+.slide-regions_fifth{
+  .slide-regions__title {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 620px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  position: relative;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+    transform: scale(0.2);
+    position: absolute;
+    z-index: -1;
+    top: 75px;
+    left: 305px;
+    background-image: url(../images/Europe-fon.svg);
+    background-repeat: no-repeat;
+    transition: 0.8s;
+  }
+
+  .slide-regions__percentage {
+    text-align: left;
+    top: 115px;
+  }
+
+  .statistic {
+    top: 150px;
+  }
+}
+
+.swiper-slide-active{
+  &.slide-regions_fifth{
+    &:before{
+      transform: scale(1);
+    }
+  }
+
+  .percent-wrap {
+    top: 455px;
+    right: 140px;
+    opacity: 1;
+  }
+
+  .percentage-block{
+    left: 60px;
+    opacity: 1;
+  }
+
+  &.slide-regions_fifth{
+    .slide-regions__percentage {
+      left: 116px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents{
+      top: 110px;
+      opacity: 1;
+    }
+
+    .statistic{
+      right: 15px;
+      opacity: 1;
+    }
+
+    .person{
+      bottom: 0px;
+      left: 116px;
+      opacity: 1;
+    }
+
+    .slide-regions__respondents {
+      top: 460px;
+      left: 57%;
+    }
+  }
+
+  .slide-regions__title{
+    top: 0px;
+  }
+}
+
+
+
+
+
